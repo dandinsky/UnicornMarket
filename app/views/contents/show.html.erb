@@ -3,8 +3,17 @@
 <%= render @content %>
 
 <div>
-  <%= link_to "Edit this content", edit_content_path(@content) %> |
-  <%= link_to "Back to contents", contents_path %>
-
-  <%= button_to "Destroy this content", @content, method: :delete %>
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <%= link_to "Modifica l'articolo", edit_content_path(@content), class: 'btn btn-devise' %> 
+      </div>
+      <div class="col s4">
+        <%= link_to "Torna alla lista", contents_path, class: 'btn btn-devise' %> 
+      </div>
+      <div class="col s4">  
+        <%= button_to "Elimina", @content, method: :delete, class: 'btn btn-devise' %>
+      </div>
+     </div>
+  </div>      
 </div>
