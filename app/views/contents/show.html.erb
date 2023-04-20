@@ -2,18 +2,23 @@
 
 <%= render @content %>
 
+
 <div>
   <div class="container">
     <div class="row">
+      <% if @content.user == current_user%>
       <div class="col s4">
         <%= link_to "Modifica l'articolo", edit_content_path(@content), class: 'btn btn-devise' %> 
       </div>
+      <% end %>
       <div class="col s4">
         <%= link_to "Torna alla lista", contents_path, class: 'btn btn-devise' %> 
       </div>
+      <% if @content.user == current_user%>
       <div class="col s4">  
         <%= button_to "Elimina", @content, method: :delete, class: 'btn btn-devise' %>
       </div>
+      <% end %>
      </div>
   </div>      
 </div>
