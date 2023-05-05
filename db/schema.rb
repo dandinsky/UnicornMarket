@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_20_115230) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_05_141709) do
   create_table "contents", force: :cascade do |t|
     t.string "titolo"
     t.text "descrizione"
@@ -18,6 +18,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_20_115230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "cover_file_name"
+    t.string "cover_content_type"
+    t.integer "cover_file_size"
+    t.datetime "cover_updated_at", precision: nil
+    t.string "allegato_file_name"
+    t.string "allegato_content_type"
+    t.integer "allegato_file_size"
+    t.datetime "allegato_updated_at", precision: nil
   end
 
   create_table "users", force: :cascade do |t|

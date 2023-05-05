@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+  source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.7"
@@ -58,6 +58,8 @@ gem 'turbolinks'
 gem 'tree'
 
 gem 'devise'
+
+gem "paperclip", "~> 6.0.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
