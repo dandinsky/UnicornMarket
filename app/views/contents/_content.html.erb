@@ -1,17 +1,18 @@
 <div id="<%= dom_id content %>">
-  
- <%= image_tag @content.cover.url(:medium) %> 
 
-  <p>
-    <%= content.titolo %>
-  </p>
+  <p id='notice'><%= notice %></p>
 
-  <p>
-    <%= content.descrizione %>
-  </p>
-
-  <p>
-    <%= content.prezzo %>
-  </p>
-
+  <div class="row">
+    <div class="col l6">
+       <%= image_tag @content.cover.url, class:'responsive-img show-img' %> 
+    </div>
+    <div class="col l6">
+      <h1 class='show-title'><%= content.titolo %></h1>
+      <h4 class='show-price'><%= number_to_currency(content.prezzo) %></h4>
+      <p>venduto da <%= content.user.name %></p>
+      <p><%= content.descrizione %></p>
+      
+      
+    </div>
+  </div>
 </div>
