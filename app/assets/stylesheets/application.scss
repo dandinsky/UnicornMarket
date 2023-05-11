@@ -20,6 +20,10 @@
     
   }
 
+  .btn-purple {
+    @extend .purple, .darken-4;
+  }
+
   .btn-login {
     width: 50%;
     background-color: teal;
