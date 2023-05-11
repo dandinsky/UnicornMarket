@@ -12,11 +12,11 @@
       </div>
       <% end %>
       <div class="col s4">
-        <%= link_to "Torna alla lista", contents_path, class: 'btn btn-login' %> 
+        <%= link_to "Torna alla lista", contents_path, class: 'btn btn-devise' %> 
       </div>
       <% if @content.user == current_user%>
       <div class="col s4">  
-        <%= button_to "Elimina", @content, method: :delete, class: 'btn btn-login' %>
+        <%= button_to "Elimina", @content, method: :delete, class: 'btn btn-devise' %>
       </div>
       <% end %>
      </div>

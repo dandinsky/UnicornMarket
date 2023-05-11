@@ -1,10 +1,10 @@
-<h1>Editing content</h1>
+<h1 class='center'>Modifica Articolo <%= @content.titolo %></h1>
 
 <%= render "form", content: @content %>
 
 <br>
 
 <div>
-  <%= link_to "Show this content", @content %> |
-  <%= link_to "Back to contents", contents_path %>
+  <%= link_to "Mostra Articolo", @content %> |
+  <%= link_to "Torna agli articoli", contents_path %>
 </div>
