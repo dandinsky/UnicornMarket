@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mldoscar/will_paginate-materialize
+  revision: e7ca5f8987c4aa19a3061c305c77565d00b284fb
+  branch: master
+  specs:
+    will_paginate-materialize (1.0.0)
+      will_paginate (~> 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -255,6 +263,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.7)
@@ -285,6 +294,8 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  will_paginate (~> 3.3)
+  will_paginate-materialize!
 
 RUBY VERSION
    ruby 2.7.7p221
