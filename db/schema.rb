@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_05_141709) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_16_082225) do
   create_table "contents", force: :cascade do |t|
     t.string "titolo"
     t.text "descrizione"
@@ -26,6 +26,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_05_141709) do
     t.string "allegato_content_type"
     t.integer "allegato_file_size"
     t.datetime "allegato_updated_at", precision: nil
+    t.string "slug"
+    t.index ["slug"], name: "index_contents_on_slug", unique: true
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "users", force: :cascade do |t|

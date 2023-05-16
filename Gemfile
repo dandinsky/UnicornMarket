@@ -67,6 +67,8 @@ gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate
 
 gem "font-awesome-rails"
 
+gem 'friendly_id', '~> 5.4.0'
+
 
 
 group :development, :test do

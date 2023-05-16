@@ -1,5 +1,9 @@
 class Content < ActiveRecord::Base
+	extend FriendlyId
+  	friendly_id :titolo, use: :slugged
+
 	belongs_to :user
+
 
 	has_attached_file :cover, styles: { medium: "300x>", thumb: "100x>" }
  	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/,message: "La copertina può essere solo un'immagine"
