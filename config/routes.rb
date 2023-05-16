@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about'
 
+  post '/compra/:slug', to:'transactions#create', as: :compra 
+
+  get '/pickup/:guid', to: 'transactions#pickup', as: :pickup
+
 
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
