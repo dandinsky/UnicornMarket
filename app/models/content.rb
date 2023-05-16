@@ -4,6 +4,8 @@ class Content < ActiveRecord::Base
 
 	belongs_to :user
 
+	has_many :sales
+
 
 	has_attached_file :cover, styles: { medium: "300x>", thumb: "100x>" }
  	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/,message: "La copertina può essere solo un'immagine"
@@ -13,7 +15,7 @@ class Content < ActiveRecord::Base
  	message: "Formato non supportato"
 
  	validates :titolo, :descrizione, :prezzo, presence: true
- 	validates :prezzo, numericality: { greater_than: 0 }
+ 	validates :prezzo, numericality: { greater_than: 49 }
  	validates :cover, attachment_presence: true
  	validates :allegato, attachment_presence: true
 

@@ -69,6 +69,8 @@ gem "font-awesome-rails"
 
 gem 'friendly_id', '~> 5.4.0'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 
 group :development, :test do
